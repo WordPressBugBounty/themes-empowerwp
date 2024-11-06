@@ -22,6 +22,8 @@ function empower_blog_sidebar_author_bio_filter( $value ) {
 
 	return $value;
 }
+add_action('init', function() {
+    add_filter( 'empower_blog_sidebar_author_bio', 'empower_blog_sidebar_author_bio_filter' );
+});
 
-add_filter( 'empower_blog_sidebar_author_bio', 'empower_blog_sidebar_author_bio_filter' );
 
